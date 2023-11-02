@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators in Javascript</title>
+</head>
+
+<body>
+    <h2>Operators in Javascript</h2>
+    <!-- 
+        operator - to perform some operation.
+
+        Type of Operators
+            - Arithmetic(+, -, *, /, %, ++, --)
+            - Assignment(=, +=, -=, *=, /=)
+            - Comparision(==, ===, >, <, >=, <=, !=)
+            - logical(&&, ||, !)
+            - Conditional/ terinary
+     -->
+
+    <script>
+        let a = 10;
+        let b = 20;
+        let c = a + b;
+        console.log(c)
+
+        // - / gives quotient
+        // - % gives reminder
+
+        // increment(preincrement, postincrement) 
+        let x = 10;
+        // preIncrement
+        console.log(++x)
+        // postIncrement
+        console.log(x++)
+        // console.log(x)
+
+        //Decrement(predecrement, postDecrement)
+        let y = 20;
+        //predecrement
+        console.log(--y)
+        //postdecrement
+        console.log(y--)
+
+        // +=
+        let val1 = 10;
+        let val2 = 30;
+        // val1+=val2
+        //   val1 = val1 + val2
+
+        // console.log(val1 += val2)
+
+        // comparision operators
+        console.log(val1 == val2)
+        console.log(val1 === val2)
+        
+        console.log(val1 != val2)
+
+        let marks = 60;
+        let attendance = 40;
+
+        if(marks > 50 || attendance > 70){
+            console.log('allowed for practicals')
+        } else {
+            console.log('not allowed to practicals')
+        }
+
+        // !
+        let isThereClassToday = true;
+        console.log(!isThereClassToday)
+
+        //terinary operator
+        // Syntax
+        // (condition) ? (statement1) : (statement2)
+        let allowed = "allowed to practicals" 
+        let notallowed = "not allowed"
+
+        marks > 50 && attendance > 70 ? console.log("allowed to practicals") :  console.log("not allowed")
+
+        console.log(25 + 10 / 2)
+
+        // truthy values 
+        // falsy values
+        // 0, "", false, undefined, null, NaN
+        
+
+        // type cohersion
+        console.log(1 + "2")
+
+        console.log("1" + 2)
+
+        console.log(1 + 2 + "peter")
+
+        console.log(1 + 2 + 5 + "hello" + 6 + 4)
+
+        // concatenation
+        phone = 57584748587
+        email = "virat@gmail.com"
+        console.log("my contact No is " + phone + "and email id is" + email)
+
+        // string / template literals
+        console.log(`my contact no is ${phone} and email id is ${email}`)
+    </script>
+</body>
+
+</html>

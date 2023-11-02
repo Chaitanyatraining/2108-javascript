@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops in Javascript</title>
+</head>
+<body>
+    <h2>Loops in Javascript</h2>
+    <!-- 
+        DRY - don't repeat yourself
+        SOC - separtion of concern
+     -->
+
+     <!-- 
+        loops - to execute some set of statements repeatdly
+
+        Iteration - repetation of a process
+
+        types: entrycontrolled & exit controlled
+
+        1.for loop
+        2.while loop
+        3.do while
+      -->
+
+      <!-- 
+        Initilizer - initilization the counter
+        condition - specify the condition that must evaluate to true/false
+        increment/decrement - increment/decrement the counter
+
+        for loop syntax
+        for(initilizer; condition; increment/decrement){
+            //code to be executed
+        }
+        
+// while loops
+//   - while loop to execute code repeatedly till it satisfies condition, unlike 
+// the for loop, while loop only requires a condition.
+
+syntax: 
+        while(condition){
+            //code to execute
+            //increment
+        }
+
+do while loop
+        syntax 
+        do{
+            // code to execute
+        }while(condition)
+
+       -->
+
+
+      <script>
+        // for Loop
+        // for(let i = 0; i<=5; i++ ){
+        //     document.write(`${i} - Hello World <br>`)
+        // }
+
+        // continue, break
+        //  for(let i = 0; i<=5; i++ ){
+        //     if( i ===3 ) break;
+            
+        //     console.log(i)
+        // }
+
+        // Nested Loop
+        // for(let i = 1; i<=3; i++){
+        //     console.log(`----------outer Loop - ${i}-------------------`)
+        //     for(let j = 1; j<=3; j++){
+        //         console.log(`Inner Loop - ${j}`)
+        //     }
+        // }
+
+        // for(let i = 1; i<=5; i++){
+        //     for(j = 1; j<=5; j++){
+        //         document.write('*')
+        //     }
+        //     document.write('<br>')
+        // }
+
+// *
+// **
+// **
+// ***
+
+// ***
+//**
+//*
+
+//  *
+// **
+//***
+
+// **
+//****
+//*****
+
+// while loop 
+
+// let i = 0;
+// while(i<=5){
+//     console.log(i)
+//     i++
+// }
+
+// do while
+
+let i = 10;
+do{
+    console.log(i)
+    i++
+}while(i<= 5)
+
+
+
+
+      </script>
+</body>
+</html>

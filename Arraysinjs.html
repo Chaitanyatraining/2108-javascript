@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in javascript</title>
+</head>
+<body>
+    <h2>Arrays in Javascript</h2>
+    <!-- 
+        Array: 
+        - continuous memory allocation of same or different types
+        - An array element can be accessed using zero base index eg array[0]
+        - An array index must be numeric
+
+        There are two ways to create an array
+        - array literal
+        - array constructor
+
+
+     -->
+
+    <script>
+        // string literal
+            // let mobiles = ['apple', 'samsung', 'vivo', 46, false]
+            // console.log(mobiles[4])
+
+        // string Constructor
+            // let laptops = new Array('Dell', 'lenovo', 'mac')
+            // console.log(typeof laptops)
+
+        // Iterate over an array
+        let cities = ['bangalore', 'chennai', 'mumbai', 'hyderabad', 'pune']
+
+        // for(let i=0; i<cities.length; i++){
+        //     console.log(cities[i])
+        // }
+
+        // array methods
+        // push() - add one or more values into an array at the last position
+        cities.push("nodia","delhi")
+        console.log(cities)
+
+        //pop() - removes an item from an array at last position
+        cities.pop()
+        console.log(cities)
+
+        //shift - removes an item from an array at beggining position
+        cities.shift()
+        console.log(cities)
+
+        //unshift - add an item from an array at beggining position
+        cities.unshift('kochi')
+        console.log(cities)
+
+        //indexOf - to get the index element
+        console.log(cities.indexOf('chennai'))
+
+        // includes - evaluates the given element exist in an array
+        console.log(cities.includes("kochi"))
+
+        //concat - this method creates a new array by merging the existing array
+        let distance = [123,4675,785]
+        let newArr = cities.concat(distance)
+        console.log(newArr)
+
+        //slice - extract part of an array
+        // console.log(cities.slice(1,4))
+
+        //splice
+        console.log(cities.splice(1, 0, 'patna'))
+        console.log(cities)
+
+        //join - it converts an array into a string
+        console.log(cities.join("-"))
+
+        // reverse - it reverse the order of array
+        console.log(cities.reverse())
+
+        // task 
+        const int = [19,4,9,19,4,6,34,6]
+        //remove the duplicates 
+        // output - [19,4,9,6,34]
+    </script>
+</body>
+</html>

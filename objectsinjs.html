@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in javascript</title>
+</head>
+<body>
+    <h3>Objects in javascript</h3>
+
+    <!-- 
+        Object - An object is a non primitive data type.object holds multiple values
+        in terms of properties(key & value pairs)
+        - object keys are always strings.
+
+        There are three ways to create any object
+         - object literal
+         - object Constructor
+         - constructor function
+     -->
+
+    <script>
+        const arr = ['peter', 25, 'reactjs']
+        
+        // object literal
+        const Peter= {
+            name:'peter',
+            age: 25,
+            course: 'Reactjs'
+        }
+
+        Peter.duration = "3 Months"
+
+        console.log(Peter)
+
+        const car = {
+            Brand: 'Porsche',
+            color: 'red',
+            Fuel: 'petrol',
+            price:'1.5M'
+        }
+
+        //object constructor
+
+        const laptop = new Object()
+        console.log(laptop)
+
+        laptop.color = 'black'
+        laptop.os = 'crome.os'
+        laptop.brand = "dell"
+        
+        // Accessing properties of an Object
+        // Dot Notation
+        // Bracket Notation
+
+        const person = {
+            fName:'peter',
+            lName:'parker',
+            age: 25,
+            course: 'Reactjs',
+            marks:{}
+        }
+
+        // Dot Notation
+        console.log(person.course)
+
+        //Bracket Notation
+        const value = person['fName']
+        console.log(value)
+
+        const x = 'Name';
+        const person1 = person["l" + x]
+        console.log(person1)
+
+        Peter['country'] = "USA"
+
+        
+
+
+    </script>
+</body>
+</html>

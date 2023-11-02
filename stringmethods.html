@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+    <h2>String Methods</h2>
+
+    <!-- 
+        string - sequence of characters
+        string is a primitive data type
+
+        There are two ways to create a string in js
+            1. string constructor
+            2. string literal
+        
+     -->
+    <script>
+        // string constructor
+        let carName = new String('lambogarini');
+        console.log(typeof carName)
+
+        // string literal
+        let mobileName = "Iphone";
+        console.log(typeof mobileName)
+        
+        // Index always starts with 0
+        // length always starts with 1
+
+        // lastIndex is always length-1
+
+        let courseName = "UI development AIT"
+        console.log(courseName.length)
+        console.log(courseName[4])
+
+        for(let i = 0; i<=courseName.length - 1; i++){
+            console.log(courseName[i])
+        }
+
+        // string concatnation
+        let firstName = "virat";
+        let lastName = "kohli";
+
+        console.log(firstName + lastName)
+
+        // string Methods
+        // indexOf - returns the index of first occurance of the given character.
+        let cityName = "new york year"
+        console.log(cityName.indexOf('y'))
+
+        // lastIndexOf - returns the index of last occurence of the given string.
+        console.log(cityName.lastIndexOf('y'))
+
+        // charAt - returns character at specfic index
+       let citycharAt = cityName.charAt(6)
+
+        // charCodeAt - returns ASCII code of the character at the index.
+        console.log(cityName.charCodeAt(5))
+
+        let str = '123$hello_764World'
+        let res = ''
+
+        for(let i = 0; i<str.length; i++){
+            if(str.charCodeAt(i) >= 48 && str.charCodeAt(i) <= 57){
+                res += str[i] //res = res + str[i]
+            }
+        }
+        console.log(res)
+
+        let stringDef = 'sequence of characters'
+        //substring - extract portion of string.
+        console.log(stringDef.substring(3, 7))
+
+            // let marks = [3,4,5,6,7]
+        // split() - converts string into array
+            console.log(stringDef.split(' '))
+
+        // replace() - replace the old word with new word
+        console.log(stringDef.replace('sequence', 'group'))
+
+        let laptopName = 'LENOVO'
+        //toLowerCase() - it converts string to lowercase
+        console.log(laptopName.toLowerCase())
+
+         //toUpperCase() - it converts string to uppercase
+         console.log(stringDef.toUpperCase())
+
+         //search() - returns index of given character
+         console.log(stringDef.search('of'))
+
+
+
+        //  tasks 
+        // difference between searech and indexof
+        // all the string methods
+        // peter parker => Peter Parker
+    </script>
+</body>
+</html>
