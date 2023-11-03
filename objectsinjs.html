@@ -31,7 +31,7 @@
 
         Peter.duration = "3 Months"
 
-        console.log(Peter)
+        // console.log(Peter)
 
         const car = {
             Brand: 'Porsche',
@@ -42,12 +42,12 @@
 
         //object constructor
 
-        const laptop = new Object()
-        console.log(laptop)
+        // const laptop = new Object()
+        // console.log(laptop)
 
-        laptop.color = 'black'
-        laptop.os = 'crome.os'
-        laptop.brand = "dell"
+        // laptop.color = 'black'
+        // laptop.os = 'crome.os'
+        // laptop.brand = "dell"
         
         // Accessing properties of an Object
         // Dot Notation
@@ -62,19 +62,58 @@
         }
 
         // Dot Notation
-        console.log(person.course)
+        // console.log(person.course)
 
-        //Bracket Notation
-        const value = person['fName']
-        console.log(value)
+        // //Bracket Notation
+        // const value = person['fName']
+        // console.log(value)
 
-        const x = 'Name';
-        const person1 = person["l" + x]
-        console.log(person1)
+        // const x = 'Name';
+        // const person1 = person["l" + x]
+        // console.log(person1)
 
-        Peter['country'] = "USA"
+        // Peter['country'] = "USA"
 
+        //hasOwnProperty
+        console.log(person.hasOwnProperty("lastName"))
+
+        //object.keys()
+        const keyslist = Object.keys(person)
+
+        console.log(keyslist)
+
+        //object.values()
+        const objValues = Object.values(person)
+        console.log(objValues)
+
+        //object.entries()
+        const entries = Object.entries(person)
+        console.log(entries)
+        // [['fName', 'peter'], ['lname', 'Parker']]
+        console.log(person)
+
+        // Object.create()
+
+        // Object.assign()
+        const newObj = Object.assign(car, person)
+
+        console.log(newObj)
+
+        // Modifying existing property
+        person.age = 15;
+        console.log(person)
+
+        // Object.freeze() - it will not allow to add new properties and also not allow
+        // to modify the existing properties.
         
+        // Object.freeze(person)
+        // person.mobile = "09877687788"
+        // console.log(person)
+
+        // object.seal() - it will not allow new properties and allows to modify existing properties.
+        Object.seal(person)
+        person.lName = "india"
+        console.log(person)
 
 
     </script>
