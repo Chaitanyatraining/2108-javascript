@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in js</title>
+</head>
+<body>
+    <h2>Functions in js</h2>
+
+    <!-- 
+        Functions 
+            - it's a subroutine contains a set of statements / block of code
+            which can perform some specfic task.
+
+            - Functions can be reusable/ can exexute as many times.
+
+        Rules while creating a functions
+            1. shoun't start with number
+            2. shoun't contain special characters other than (_) underscore.
+            3. shoun't be a reserved keyword. 
+
+        1. Function Declaration
+        syntax: 
+            function <function_name>(){
+                //code to execute    
+            }
+
+        2. functions with parameters
+        syntax: 
+        function <function_name(parameter1, parameter2){
+            //code to execute
+        }
+
+        <function_name(arguments1, argument2)
+
+        3. function with return keyword
+            - A function can return zero or one value using return keyword
+            - A function can return another function
+     -->
+
+
+
+    <script>
+        // function Declaration
+        // function greet(){
+        //     alert('Functions Executed')
+        // }
+
+        // greet()
+
+        // Functions with parameters
+
+        // function addTwoNumbers(a, b){
+        //     console.log(a + b)
+        // }
+
+        // addTwoNumbers(10, 20)
+
+        // return
+        function addTwoNumbers(num1, num2){
+            const res = num1 + num2;
+            console.log('before return')
+            return res
+            console.log('after return')
+        } 
+
+        const result = addTwoNumbers(10, 30)
+        console.log(result)
+        
+    </script>
+</body>
+</html>

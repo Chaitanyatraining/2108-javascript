@@ -10,8 +10,8 @@
 
     <script>
         // Math object
-        const petrolPrice = 110.13;
-        console.log(petrolPrice) 
+        // const petrolPrice = 110.13;
+        // console.log(petrolPrice) 
 
         // console.log(`round of ${petrolPrice} is ${Math.round(petrolPrice)}`)
 
@@ -22,14 +22,31 @@
         // console.log(`Absolute of ${petrolPrice} is ${Math.abs(petrolPrice)}`)
 
         // console.log(`power of 10, 4 is ${Math.pow(10, 4)}`)
-        console.log(`square root of 16 is ${Math.sqrt(16)}`)
-        console.log(`maximun number of 22,34,75,23,12 is ${Math.min(22,34,75,23,12)}`)
+        // console.log(`square root of 16 is ${Math.sqrt(16)}`)
+        // console.log(`maximun number of 22,34,75,23,12 is ${Math.min(22,34,75,23,12)}`)
 
-        console.log(`Random Number is ${Math.random() * 1000000}`)
+        // console.log(`Random Number is ${Math.random() * 1000000}`)
 // const randomNumber = Math.random() * 1000000;
 
-        console.log(Math.trunc(12345.5456))
+        // console.log(Math.trunc(12345.5456))
         
+
+        ////////////////////////////////////
+        // Date()
+        const today = new Date()
+        console.log(today)
+        console.log(`Today Number is ${today.getDay()}`)
+
+        const days = ['sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+
+        console.log(days[today.getDay()])
+
+        console.log(today.getMonth())
+
+        console.log(today.getFullYear())
+        console.log(today.getHours())
+        console.log(today.getMinutes())
+        console.log(today.getSeconds())
     </script>
 </body>
 </html>
