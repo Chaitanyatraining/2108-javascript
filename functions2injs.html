@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcitons 2</title>
+</head>
+<body>
+    <h2>Funcitons2</h2>
+    <button>Click Here</button>
+    <script>
+        //nested functions
+
+        function greet(firstName){
+            
+            function sayHello(){
+                // alert(`Hello ${firstName}`)
+            }
+            sayHello()
+
+        }
+        greet('Dhoni')
+
+        //Inner functions can have access to all the properties of the outer funciton
+        // A funciton can have one or more inner functions. these nested function are in scope of outer funcitons.
+
+
+        // function Expression
+        // let add = function(num1, num2){
+        //     return num1 + num2
+        // }
+
+        // console.log(add(10,20))
+
+        // Arrow Function(Es6)
+        // it allows you to create a function in a cleaner way.
+
+        const addTwoNumbers = (num1, num2) => {
+            return num1 + num2
+        }
+
+        console.log(addTwoNumbers(10, 20))
+
+        // functions with default parameters
+        function subtraction(num1, num2, num3 = 10){
+            const res = num1 - num2 - num3
+            console.log(res)
+        }
+        subtraction(30, 20, 5)
+
+        // console.log([] === [])
+
+        // console.log({} === {})
+
+        const btn = document.querySelector('h2')
+        btn.addEventListener('click', ()=>{
+            alert('button clicked')
+        })
+
+        //compare two objects
+    </script>
+</body>
+</html>

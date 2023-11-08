@@ -67,6 +67,20 @@
 
         const result = addTwoNumbers(10, 30)
         console.log(result)
+
+        //utility function /helper funciton
+
+        function fruitProcessor(apple, orange){
+            const applePieces = apple * 4;
+            // const orangePieces = orange * 4;
+            cutFruits(orange)
+            console.log(`Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange`)
+        }
+        fruitProcessor(5,3)
+
+        function cutFruits(fruit){
+            return fruit * 4
+        }
         
     </script>
 </body>
