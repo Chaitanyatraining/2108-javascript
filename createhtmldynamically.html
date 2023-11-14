@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic HTML using JS</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        section {
+            display: flex;
+        }
+
+        section figure {
+            flex: 1;
+            margin: 0 10px;
+            border: 1px solid grey;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        Ways to store Information
+        - strings
+        - arrays
+        - objects
+        - array of objects
+     -->
+    <section id="approach2"></section>
+
+
+    <script>
+        let products = [
+            {
+                name: 'lenovo',
+                image: 'laptop.jpg',
+                oldPrice: '30000',
+                newPrice: '25000'
+            },
+            {
+                name: 'mac',
+                image: 'laptop.jpg',
+                oldPrice: '30000',
+                newPrice: '25000'
+            },
+            {
+                name: 'dell',
+                image: 'laptop.jpg',
+                oldPrice: '30000',
+                newPrice: '25000'
+            },
+            {
+                name: 'asus',
+                image: 'laptop.jpg',
+                oldPrice: '30000',
+                newPrice: '25000'
+            },
+        ]
+
+        //generate html using js
+        //approach 1
+
+        // let cards = '<section>';
+        // for (let i = 0; i < products.length; i++) {
+        //     cards += '<figure>';
+        //     // cards +=  '<img src="./'+products[i].image+'">';               <figcaption>lenovo</figcaption>
+        //     cards += '<figcaption>' + products[i].oldPrice + '</figcaption>';
+        //     cards += '<figcaption>' + products[i].newPrice + '</figcaption>';
+        //     cards += '</figure>'
+        // }
+        // cards += '</section>';
+
+        // document.getElementsByTagName('body')[0].innerHTML = cards
+
+        //approach 2
+        let cards_new = ''
+        for (let i = 0; i < products.length; i++) {
+            cards_new += `
+            <figure>
+                <img src="./${products[i].image}" />
+                <figcaption>${products[i].name}</figcaption>
+                <figcaption>${products[i].oldPrice}</figcaption>
+                <figcaption>${products[i].newPrice}</figcaption>
+            </figure>`
+        }
+
+        // document.getElementsByTagName('body')[0].innerHTML = cards_new
+
+        document.getElementById('approach2').innerHTML = cards_new
+    </script>
+
+</body>
+
+</html>
