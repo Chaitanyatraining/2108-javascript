@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .flexitems {
+            flex: 1
+        }
+
+        .box {
+            border: 1px solid fuchsia;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>DOM - 2</h2>
+
+    <figure id="figure">
+        <img src="https://www.achieversit.com/assets/images/logo-white.png" alt="ait" />
+        <figcaption>AchieversIT</figcaption>
+    </figure>
+    <section class="container">
+
+    </section>
+    <ul>
+        <li>JAVASCRIPT</li>
+        <li>REACTJS</li>
+        <li>NODEJS</li>
+    </ul>
+
+    <ul>
+        <li>JAVASCRIPT</li>
+        <li>REACTJS</li>
+        <li>NODEJS</li>
+    </ul>
+    <ul>
+        <li>JAVASCRIPT</li>
+        <li>REACTJS</li>
+        <li>NODEJS</li>
+    </ul>
+
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sunt provident hic possimus,
+        autem eligendi explicabo a ipsam voluptate quis! Quos fuga aliquid eos quia!</p>
+    <input type="text" />
+
+    <script>
+        // selector - which helps to select an element.
+        // getElementById() - we can select an element id attribute
+        document.getElementById('figure').style.border = "1px solid red"
+        // getElementsByClassName()
+        document.getElementsByClassName('para')[0].style.border = "5px dotted brown"
+        // getElementsByTagName()
+        document.getElementsByTagName('ul')[2].style.color = "blue"
+
+        // querySelector() - we can select an element by using any selector which you know in css. but it returns only first selected element.
+        document.querySelector('.para').style.color = "green"
+
+        //querySelectorAll() - we can select elements by using any selector which you know in css. but it returns all elements
+
+        document.querySelectorAll('ul li')[2].style.color = "yellow"
+
+        const students = ['ravi', 'peter', 'james', 'rajesh', 'william']
+
+        let parentEle = `
+            <section>${students[0]}</section>
+            <section>${students[1]}</section>
+            <section>${students[2]}</section>
+            <section>${students[3]}</section>
+        `
+        // document.getElementsByTagName('section')[0].innerHTML = parentEle
+
+        let str = ''
+
+        for (let i = 0; i < students.length; i++) {
+            str += `<div class="flexitems box">${students[i]}</div>`
+        }
+
+        document.querySelector('section').innerHTML = str
+
+        const userData = [
+            {
+                "id": 1,
+                "name": "Leanne Graham",
+                "username": "Bret",
+                "email": "Sincere@april.biz",
+            },
+            {
+                "id": 2,
+                "name": "Ervin Howell",
+                "username": "Antonette",
+                "email": "Shanna@melissa.tv",
+            }
+        ]
+        
+
+
+
+    </script>
+</body>
+
+</html>
