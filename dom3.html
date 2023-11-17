@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 3</title>
+    <style>
+         .container {
+            display: flex;
+        }
+
+        .flexitems {
+            flex: 1
+        }
+
+        .box {
+            border: 1px solid fuchsia;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .bg-color{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h2>DOM-3</h2>
+    <!-- 
+        <section class="container">
+        <div class="box flexitems">peter</div>
+        <div class="box flexitems">jessica</div>
+        <div class="box flexitems">Tony</div>
+    </section>
+ -->
+
+    <section>
+        <div class="flexitems box"></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <script>
+        //create Element
+        let parentEle = document.createElement('section')
+        let divEle1 = document.createElement('div')
+        let divEle2 = divEle1.cloneNode()
+        let divEle3 = divEle1.cloneNode()
+
+        //putting child elements into parent
+        parentEle.appendChild(divEle1);
+        parentEle.appendChild(divEle2);
+        parentEle.appendChild(divEle3);
+
+        
+        //creating text node to place inside the div
+        let txt1 = document.createTextNode('peter')
+        let txt2 = document.createTextNode('Jessica')
+        let txt3 = document.createTextNode('tony')
+
+        // putting text nodes inside the divs
+        divEle1.appendChild(txt1);
+        divEle2.appendChild(txt2);
+        divEle3.appendChild(txt3);
+
+        document.querySelector('body').appendChild(parentEle)
+
+        //adding attributes to html elements
+        parentEle.setAttribute('class', 'container');
+        divEle1.setAttribute('class', 'flexItems box')
+        divEle2.setAttribute('class', 'flexItems box')
+        divEle3.setAttribute('class', 'flexItems box')
+
+        parentEle.setAttribute('style', "background-color:red")
+        parentEle.removeAttribute("style")
+
+        // parentEle.classList.add('bg-color')
+        // parentEle.classList.remove('bg-color')
+        parentEle.classList.toggle('bg-color')
+    </script>
+</body>
+</html>
