@@ -17,7 +17,15 @@ const addBtn = document.getElementById('addBtn')
 function validateName(){
     const name = nameValue.value
 
-    if(name.length == 0){
+    // if(name.length == 0){
+    //     nameErr.innerHTML = `<span class="text-danger" id="name-Err">Enter a valid userName</span>`
+    //     addBtn.disabled = true;
+
+    //     return false;
+    // }
+
+    const pattern3 = /^[a-z](?:[a-z0-9-]*[a-z0-9])?$/
+    if(!name.match(pattern3)){
         nameErr.innerHTML = `<span class="text-danger" id="name-Err">Enter a valid userName</span>`
         addBtn.disabled = true;
 

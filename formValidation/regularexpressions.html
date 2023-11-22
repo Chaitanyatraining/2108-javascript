@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions</title>
+</head>
+<body>
+    <h2>Regular Expressions</h2>
+
+    <script>
+        const str = "javascript is a programming is language"
+        const pattern = /is/g;
+
+        console.log(pattern.test(str))
+
+        console.log(str.match(pattern))
+
+        const mob = '8989898989';
+        const pattern1 = /^[8,9][0-9]{9}$/;
+        // ^ - starting
+        // $ - ending
+
+        console.log(mob.match(pattern1))
+
+        // brackets - defines the range of characters
+        // [abc] - a, b, c
+        // [^abc] - anycharactersexcept a,b,c
+        // [a-z] - any characters from a to z
+        // [A-Z] - any charcters from A to Z
+        // [a-zA-z] - any characters for a-z and A-z
+        // [0-9] - should contain numbers from 0-9
+
+
+        // quantifiers - which gives information about repations
+        // []? - occurs 0 or 1 time
+        // []+ - occurs 1 or more times
+        // []* - occurs or more times
+        // []{n} - occurs n
+        // []{n, } - occurs n or more times
+        // []{x, y} - occurs at least x times or less than y times
+
+        // modifiers
+        // g - performs global match
+        // i -  it performs case insensitive match
+        // m - it performs multiline matching
+
+        // reEx meta characters
+        // \d - [0-9] - accepts all numbers from 0 to 9
+        // \D - [^0-9] - accepts all numbers except 0 and 9
+        // \w - [a-zA-z0-9] - accept a-z and 0-9
+        // \W - [^a-zA-z0-9] - except this characters it accepts others special char
+        // \s - space 
+        // \ - escapt character tell computer to treate following characters as search characters
+    </script>
+</body>
+</html>
