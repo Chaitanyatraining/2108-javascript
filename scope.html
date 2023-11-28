@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+
+<body>
+
+    <!-- 
+        useStrict 
+        released with Es5, it tells browser to change the way in which js executes.
+
+        strict mode is essentially for developers to write better and more secure 
+        code leading to less mistakes
+    -->
+    <script>
+        // "use strict"
+
+        // let x = 10;
+        // console.log(x)
+
+        // function add(a, a){
+        //     "use strict"
+        //     return a + a
+        // }
+        // console.log(add(4,5))
+
+        /*
+        scope in javascript
+        scoping - variables organisation and accessed, wehre do variables live, 
+        where these variables can access or not.
+
+        function scope, block scope and global scope
+
+
+        */
+
+        // global scope
+        // var a = 1;
+        // let b = 2;
+        // const c = 3;
+
+        // console.log(a, b, c)
+
+        // if(true){
+        //     console.log(a,b,c)
+        // }
+
+        // function print(){
+        //     console.log(a,b,c)
+        // }
+        // print()
+
+        //function scope 
+        // function print() {
+        //     var a = 1;
+        //     let b = 2;
+        //     const c = 3;
+        // }
+        // console.log(c)
+        // print()
+        //variables inside a funciton can be accessed only insoide the function, not outside
+
+
+        //block scope
+        // if (true) {
+        //     var a = 1;
+        //     let b = 2;
+        //     const c = 3;
+        // }
+        // console.log(b)
+
+        //variables can be accessed only within the block(let and const)
+
+        // scope chain
+        const firstName = "James"
+
+        parentFunc()
+        
+        function parentFunc() {
+            const age = 25;
+
+            if (age >= 20) {
+                const decode = 25
+                var millienium = true
+            }
+            
+
+            function childFunc() {
+                const job = "engineer";
+                console.log(`${firstName} is a ${age} - old ${job}`)
+            }
+            childFunc()
+        }
+
+       
+
+
+    </script>
+</body>
+
+</html>
