@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primitive vs reference</title>
+</head>
+<body>
+    
+    <script>
+        let x = 10;
+        const y = x;
+
+        x = 20;
+
+        console.log(x, y)
+
+        // non-primitive
+
+        let person = {
+            name: "peter",
+            age: 25
+        }
+
+        // let friend = person
+        // person.age = 30
+
+        //shallow copy
+        const friend = Object.assign({}, person)
+
+        person.age = 30
+        //  console.log('person', person)
+        // console.log('friend', friend)
+
+        // JSON - javascript object notation
+        const car = {
+            brand: "honda",
+            model: 'city'
+        }
+
+        console.log(car)
+
+        const carstringify = JSON.stringify(car)
+        console.log(carstringify) 
+
+        const carparse = JSON.parse(carstringify)
+        console.log(carparse)
+
+        
+    </script>
+</body>
+</html>
