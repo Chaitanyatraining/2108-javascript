@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call Apply Bind</title>
+</head>
+<body>
+    <h2>Call Apply Bind</h2>
+    <script>
+
+        const apple = {
+            brand: 'apple',
+            model: 'iphone 14',
+            // info: printInfo
+        }
+
+        // apple.info('dec', 2023)
+
+        const samsung = {
+            brand: 'samsung',
+            model: 'galaxy s23' 
+        }
+
+        const printInfo = function(month, year){
+                console.log(`${this.brand} ${this.model} was released on ${month}, ${year}`)
+            }
+
+            // printInfo("dec", 2023)
+            
+            // printInfo.call(samsung, 'jan', 2024)
+            // printInfo.call(apple, 'feb', 2024)
+
+    /*
+        call - the call method allows us to manually explicitly set this keyword
+        of any function that we want to call, then all the remaining arguments are 
+        of the function
+
+    */
+
+    // apply
+    /*
+        it is exactly same as call method, the only difference is that apply doesn't
+        receive a list argumens after the this keyword, but its is going to takw an array
+        of arguments and pass it into function.
+    */
+
+    const arr = ["mar", 2024]
+    printInfo.apply(samsung, arr)
+
+    //bind 
+    const appleBind = printInfo.bind(apple)
+        appleBind('april', 2024)
+
+    const samsungBind = printInfo.bind(samsung)
+    samsungBind('may', 2024)
+    </script>
+</body>
+</html>

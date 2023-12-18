@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Operators</title>
+</head>
+<body>
+    <h2>Modern Operators</h2>
+    
+    <!-- 
+        OR - The || operator will return the first truthy at all the operands
+        or simply the last value it all of them are falsy.
+
+     -->
+    <script>
+        // falsy values - 0, NaN, undefined, '', false
+        
+        console.log(3 || "peter")
+        console.log('' || "hello")
+        console.log(true || 0)
+        console.log(undefined || null)
+        console.log(undefined || 0 || "hello" || 23 || null)
+
+        const car = {
+            make: 'honda',
+            km:0
+        }
+        console.log(`distance travelled by car is ${car.km}`)
+
+        // if(car.km){
+        //     console.log(`distance travelled by car is ${car.km}`)
+        // } else{
+            
+        // }
+
+        console.log(car.km || "no data found")
+
+        // AND
+            console.log(0 && "peter")
+            console.log(7 && "peter")
+            // console.log("hello" && 23 && null && "peter")
+
+        // console.log(`the brand is ${car.make}`)
+        car.km && console.log(`the brand is ${car.make}`)
+
+
+        //nullish coaliscing(es2020)
+        //only null and undefined is falsy
+        console.log(car.km ?? "no data found")
+
+        //option chaining(?.)
+            const restarant = {
+                name: 'starbucks',
+                // opeingHours:{
+                //     thu:{
+                //         // open: 12,
+                //         close: 22,
+                //     },
+                //     fri:{
+                //         open: 11,
+                //         close: 23,
+                //     },
+                //     sat:{
+                //         open: 12,
+                //         close: 22,
+                //     },
+                // }
+            }
+
+            console.log(restarant.opeingHours?.thu?.open)
+            // console.log(`the restaurnt open in ${restarant.opeingHours?.thu?.open}`)
+    </script>
+</body>
+</html>

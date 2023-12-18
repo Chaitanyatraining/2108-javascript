@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Operators</title>
+</head>
+
+<body>
+    <h2>Modern Operators</h2>
+    <!-- 
+        destructuring object
+        spread and rest operators
+
+     -->
+    <script>
+        //destructuring
+        const person = {
+            name: 'william',
+            father: "johnson",
+            mother: 'clark',
+            hobbies: ["Reading", "sports", "Travelling"],
+            friends: ["Mark", "kyle", 'nick']
+        }
+        const { name } = person;
+
+        // //rename variables
+        // const { father: parent, name: firstName } = person
+        // console.log(parent, firstName)
+
+        // array destructuring
+        const arr = [1, 2, 3, 4]
+        // const [a, b, c, d] = arr
+        // console.log(a, b, c, d)
+        const arr2 = [1,2, [3,4,5], 6]
+        const obj = {
+            a: 1,
+            b: {
+                c: 2,
+                d: 3
+            },
+            e: 4
+        }
+
+        const { a, b: { c, d } } = obj
+        console.log(c, d)
+
+        const userData = {
+            "id": 1,
+            "name": "Leanne Graham",
+            "username": "Bret",
+            "email": "Sincere@april.biz",
+            "address": {
+                "street": {
+                    east:'115 layout1',
+                    west:'115 layout2',
+                    north:'115 layout3',
+                    south:'115 layout4',
+                },
+                "suite": "Apt. 556",
+                "city": ["hyderabad", "chennai", "bangalore"],
+                "zipcode": "92998-3874",
+                "geo": {
+                    "lat": "-37.3159",
+                    "lng": "81.1496"
+                }
+            }
+        }
+        
+        const {address:{city}} = userData
+        // console.log(west)
+
+
+        // default values
+        const {name: fname, mother="jessica"} = person
+        console.log(mother)
+
+        //spread operator(...)
+        const countries = ["india", "uk", "italy", "china"]
+        // const newList = ["USA", "canada","srilanka"]
+
+        const newList = [...countries, "USA", "canada"]
+
+        console.log(newList)
+
+        const fruits = ["apple", 'mango', 'kiwi', 'orange']
+        const newFruits = fruits;
+
+        newFruits.push('grapes')
+        console.log(fruits)
+
+        // rest operator(...)
+        
+        const newcountries = ["india", "uk", "italy", "china"]
+
+        // const [x, y, ...rest] = newcountries
+        console.log(x, y, rest)
+
+        const car = {
+            brand: 'honda',
+            model:'city',
+            year: 2023
+        }
+        const {brand, ...rest} = car
+        console.log(brand, rest)
+
+    </script>
+
+</body>
+
+</html>

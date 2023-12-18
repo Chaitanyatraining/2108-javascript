@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced funcitons</title>
+</head>
+
+<body>
+    <h2>advanced functions</h2>
+    <button>Click here</button>
+    <!-- 
+        first class funciton: 
+            js has funcdamental property called first class funciton. helps
+            to write higher order functions.
+
+            -js treats functions as first class citizen.
+            - functions are treated as simple values.
+     -->
+    <script>
+        //first class functions
+        let x = 10;
+
+        let print = function () { }
+
+        const person = {
+            name: 'xyz',
+            info: function () {
+
+            }
+        }
+
+        //higher order funciton - function that receives function as an argument
+        //, that returns a new another function.
+
+
+        function add(a, b) {
+            // console.log(a + b)
+            return function () {
+
+            }
+        }
+
+        add(2, print())
+
+        //class back funciton
+        //the function which is passing as an argument is called callback.
+
+        // addeventlistener is higerorder function, event function is callback function
+        const btn = document.querySelector('button')
+
+        btn.addEventListener('click', function () {
+            console.log('button was clicked')
+        })
+
+        //callback function 
+        //javascript is good ==> JAVASCRIPT is good
+        // function toupper(char) {
+
+        // }
+
+        // function textTran(str, fn) {
+        //     console.log(`the output is : ${fn(str)}`)
+
+        // }
+        // textTran('javascript is good', toUpper())
+// -----------------------
+
+            /*closure
+            Any function always access to the variables of the execution context in 
+             which the funciton was created after the execution context is gone. the closure
+            is then basically this variable environment to the funciton at the time and place 
+            was created.
+
+            */
+        function count(){
+            let counter = 0;
+
+            return function(){
+                counter++
+                console.log(counter)
+            }
+        }
+        let a = count()
+        a()
+
+        // foo()
+
+    
+        
+    </script>
+</body>
+
+</html>
