@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+<body>
+    <h2>Ajax</h2>
+    <button>Click</button>
+    <!-- 
+        - synchronous
+        - asynchronous
+
+    synchronous codes
+        - Executes line by line
+        - Each line code waits for previous line to finish
+        - Blocking in nature
+
+    
+     -->
+
+     <script>
+        // console.log('a')
+        
+        // setTimeout(() => {
+        //     console.log('b')
+        // }, 0);
+
+        // setTimeout(() => {
+        //     console.log('c')
+        // }, 2000);
+
+        // console.log('d')
+
+        // console.log('a')
+        // let count = 0;
+        // for(let i = 1; i<10000000; i++){
+        //     count += i
+        // }
+        // console.log(count)
+
+        //  setTimeout(() => {
+        //     console.log('c')
+        // }, 2000);
+
+        // console.log('b')
+
+        // const btn = document.querySelector('button')
+        // btn.addEventListener('click', ()=> {
+        //     console.log('button was clicked')
+        // })
+
+        
+        fetch('https://jsonplacehlder.typicode.com/users').then((res) => {
+            return res.json()
+        }).then(data => console.log(data))
+        .catch(err => console.log('error', err))
+
+        /*
+         ajax - async javascript and xml
+         it allows us to communicate ith remote web servers in an asynchronous way,
+        with ajax, we can request data from the web servers dynamically.
+        */
+     </script>
+</body>
+</html>

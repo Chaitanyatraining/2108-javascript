@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oops</title>
+</head>
+<body>
+    <h2>oops</h2>
+    <!-- 
+        There are three ways to achieve prototypical inheritance
+        - constructor function
+        - Es6 class
+        - Object.create method
+     -->
+     
+    <script>
+        //constructor function
+
+        function person(name, year){
+            this.firstName = name;
+            this.birthYear = year;
+        }
+
+        const peter = new person("peter", 1995) //instatiation 
+        console.log(peter)
+
+        const jessica = new person("jessica", 1996)
+        console.log(jessica)
+
+        //Adding a method to constructor function prototype
+        person.prototype.calcAge = function(){
+            console.log(2023 - this.birthYear)
+        }
+
+        // console.log(peter)
+        peter.calcAge()
+
+        jessica.calcAge()
+
+        //adding a property into the prototype
+        person.prototype.species = "homosepeians"
+        console.log(peter)
+
+        //literal way
+        const car = {
+            brand: "honda",
+            color:'red'
+        }
+
+        //constructor way
+        // const person =  new Object()
+
+
+
+    </script>
+</body>
+
+</html>
